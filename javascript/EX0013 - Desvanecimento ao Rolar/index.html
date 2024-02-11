@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        #scrollTarget {
+            height: 1200px;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #seuElemento {
+            background-color: #3498db;
+            color: #fff;
+            padding: 20px;
+            margin-top: 50vh; 
+            opacity: 0; 
+            transition: opacity 0.7s ease; /* Adiciona uma transição suave para o efeito de aparecimento */
+        }
+    </style>
+    <title>Aparecimento ao Rolar</title>
+</head>
+
+<body>
+    <div id="scrollTarget">
+
+    <div id="seuElemento">Seu Conteúdo</div>
+
+    </div>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            var element = document.getElementById("seuElemento");
+            var scrollPosition = window.scrollY;
+
+            // Ajuste o valor 200 de acordo com sua preferência
+            element.style.opacity = scrollPosition / 200;
+        });
+    </script>
+</body>
+
+</html>

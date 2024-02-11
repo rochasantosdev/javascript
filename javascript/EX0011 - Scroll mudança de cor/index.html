@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #scrollTarget {
+            height: 1200px;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #container {
+            background-color: red;
+            color: black;
+            height: 100px;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    <title>JAVASCRIPT</title>
+</head>
+
+<body>
+    <div id="scrollTarget">
+        <div id="container">Teste</div>
+    </div>
+
+    <script>
+        // Adiciona um ouvinte de evento de rolagem à janela
+        window.addEventListener("scroll", function () {
+            // Obtém o elemento scrollTarget (não utilizado neste código)
+            var target = document.getElementById("scrollTarget");
+
+            // Obtém o elemento container
+            var div = document.querySelector("#container");
+
+            // Verifica se a posição de rolagem é maior que 200 pixels
+            if (window.scrollY > 200) {
+                // Se verdadeiro, define a cor de fundo como preta
+                div.style.backgroundColor = "black";
+                // Além disso, define a cor do texto como branca
+                div.style.color = "white";
+            } else {
+                // Se falso, redefine a cor de fundo de volta para vermelho
+                div.style.backgroundColor = "red";
+                // Além disso, redefine a cor do texto de volta para preto
+                div.style.color = "black";
+            }
+        });
+    </script>
+</body>
+
+</html>
+
+
+</html>

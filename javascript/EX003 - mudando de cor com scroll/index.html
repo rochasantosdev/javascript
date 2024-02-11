@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #scrollTarget {
+            height: 2000px;
+            background-color: rgb(255, 255, 255);
+        }
+    </style>
+    <title>JAVASCRIPT</title>
+</head>
+
+<body>
+    <div id="scrollTarget"></div>
+    <script>
+         window.addEventListener("scroll", function () {
+            var target = document.getElementById("scrollTarget");
+            if (window.scrollY > 200) {
+                target.style.backgroundColor = "blue";
+            }
+        });
+    </script>
+</body>
+
+</html>

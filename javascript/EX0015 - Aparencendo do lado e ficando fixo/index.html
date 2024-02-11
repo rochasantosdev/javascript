@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden; /* Para esconder a barra de rolagem horizontal */
+        }
+
+        #scrollTarget {
+            height: 1800px;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #seuElemento {
+            background-color: #3498db;
+            color: #fff;
+            padding: 20px;
+            margin-top: 50vh; /* Inicialmente colocado no meio da tela */
+            opacity: 0; /* Inicialmente invisível */
+            transition: opacity 0.5s ease, transform 0.8s ease; /* Adiciona uma transição suave para o efeito de aparecimento e movimento */
+            transform: translateX(100%); /* Inicialmente fora da tela à direita */
+        }
+    </style>
+    <title>Aparecimento e Alinhamento Horizontal ao Rolar</title>
+</head>
+
+<body>
+    <div id="scrollTarget">
+        <div id="seuElemento">Seu Conteúdo</div>
+    </div>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            var element = document.getElementById("seuElemento");
+            var scrollPosition = window.scrollY;
+
+            // Ajuste o valor 200 de acordo com sua preferência
+            var maxScroll = 200;
+
+            // Ajuste os valores para a velocidade desejada e a posição final
+            var finalTranslate = Math.min((scrollPosition / 2), maxScroll);
+
+            // Ajuste o valor 200 de acordo com sua preferência
+            element.style.opacity = scrollPosition / 200;
+
+            // Define a posição final da transformação
+            element.style.transform = "translateX(" + (200 - finalTranslate) + "%)";
+        });
+    </script>
+</body>
+
+</html>

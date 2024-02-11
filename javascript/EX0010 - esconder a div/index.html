@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Div e Botão</title>
+    <style>
+        
+        #container {
+            background-color: red;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">Teste</div>
+    <button id="btn">Ação</button>
+
+    <script>
+
+
+        var btn = document.querySelector("#btn");
+        btn.addEventListener("click", function () {
+            var div = document.querySelector("#container");
+
+            if (div.style.display === "none") {
+                div.style.display = "block";
+            } else {
+                div.style.display = "none";
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
