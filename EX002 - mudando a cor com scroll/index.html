@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>JAVASCRIPT</title>
+</head>
+<body>
+    <button class="clicar">CLIQUE AQUI</button>
+
+    <script>
+        // Obtém o botão
+        var btn = document.querySelector(".clicar");
+
+        // Adiciona um ouvinte de evento de clique ao botão
+        btn.addEventListener("click", function() {
+            document.body.style.backgroundColor = "blue";
+        });
+    </script>
+</body>
+</html>
